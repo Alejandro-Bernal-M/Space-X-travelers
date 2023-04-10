@@ -64,3 +64,16 @@
   border: none;
   border-radius: 6px;
 }
+
+.rocket-btn-cancel {
+  background: transparent;
+  border: 1px solid gray;
+  border-radius: 6px;
+  height: 40px;
+  width: 150px;
+  color: grey;
+}
+
+.reserved {
+  color: red;
+}
