@@ -15,6 +15,7 @@ const MissionsTable = () => {
           key={element.mission_id}
           name={element.mission_name}
           description={element.description}
+          id={element.mission_id}
         />
       ))}
     </div>

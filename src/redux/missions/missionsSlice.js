@@ -19,6 +19,16 @@ const initialState = {
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
+  reducers: {
+    joinMission: (state, action) => {
+      const newState = state.missions.forEach((element) => {
+        if (element.mission_id === action.payload) {
+          element.reserved = true;
+        }
+      });
+      return newState;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchMissions.pending, (state) => {
