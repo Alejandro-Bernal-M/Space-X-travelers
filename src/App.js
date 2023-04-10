@@ -1,30 +1,21 @@
-import Navbar from './components/Navbar/Navbar'
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Rockets from './routes/Rockets';
+import NotMatch from './routes/NotMatch';
+import Missions from './routes/Missions';
+import Profile from './routes/Profile';
 import './App.css';
 
 function App() {
   return (
-    <div >
-      <Navbar />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+      <Route index element={<Rockets />} />
+      <Route path="missions" element={<Missions />} />
+      <Route path="myprofile" element={<Profile />} />
+      <Route path="*" element={<NotMatch />} />
+    </Route>
+    </Routes>
   );
 }
 

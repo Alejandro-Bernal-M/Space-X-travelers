@@ -1,5 +1,5 @@
  import Logo from './planet.png';
-// import { NavLink } from 'react-router-dom';
+ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const links = [
@@ -18,9 +18,9 @@ const Navbar = () => {
         {links.map((item) => {
           return (
           <li className='nav-li'>
-            {/* <NavLink className="navlink" to={item.path}> */}
+            <NavLink className="navlink" to={item.path}>
               {item.text}
-            {/* </NavLink>   */}
+            </NavLink>  
           </li>
           )
         })}
