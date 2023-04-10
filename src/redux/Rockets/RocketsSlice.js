@@ -45,7 +45,7 @@ const Rockets = createSlice({
     });
     builder.addCase(fetchRockets.rejected, (state) => ({
       ...state,
-      isLoagind: false,
+      isLoading: false,
       error: true,
     }
     ));
