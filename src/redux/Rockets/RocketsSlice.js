@@ -22,7 +22,24 @@ const initialState = {
 const Rockets = createSlice({
   name: 'Rockets',
   initialState,
-  reducers: {},
+  reducers: {
+    booking: (state, payload) => {
+      const newState = state.rockets.forEach((item) => {
+        if (item.id === payload.payload) {
+          item.reserved = true;
+        }
+      });
+      return newState;
+    },
+    cancelBooking: (state, payload) => {
+      const newState = state.rockets.forEach((item) => {
+        if (item.id === payload.payload) {
+          item.reserved = false;
+        }
+      });
+      return newState;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.pending, (state) => ({
       ...state,
@@ -54,3 +71,4 @@ const Rockets = createSlice({
 });
 
 export default Rockets.reducer;
+export const { booking, cancelBooking } = Rockets.actions;

@@ -18,6 +18,7 @@ const Rockets = () => {
           name={item.name}
           image={item.image}
           description={item.description}
+          reserved={item.reserved}
         />
       ))}
     </div>
