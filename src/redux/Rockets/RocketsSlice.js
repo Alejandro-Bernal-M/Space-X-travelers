@@ -13,7 +13,11 @@ export const fetchRockets = createAsyncThunk(
   },
 );
 
-const initialState = [];
+const initialState = {
+  isLoading: false,
+  error: false,
+  rockets: [],
+};
 
 const Rockets = createSlice({
   name: 'Rockets',
@@ -25,15 +29,24 @@ const Rockets = createSlice({
       isLoagind: true,
     }
     ));
-    builder.addCase(fetchRockets.fulfilled, (state, action) => (
-      {
-        ...state,
-        isLoagind: false,
-        rockets: action.payload,
-      }));
+    builder.addCase(fetchRockets.fulfilled, (state, action) => {
+      const rockets = [];
+      action.payload.forEach((rocket) => {
+        const newRocket = {
+          id: rocket.rocket_id,
+          name: rocket.rocket_name,
+          type: rocket.rocket_type,
+          image: rocket.flickr_images[0],
+          description: rocket.description,
+        };
+        rockets.push(newRocket);
+      });
+      state.rockets = rockets;
+    });
     builder.addCase(fetchRockets.rejected, (state) => ({
       ...state,
       isLoagind: false,
+      error: true,
     }
     ));
   },
