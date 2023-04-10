@@ -1,11 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchRockets } from '../redux/Rockets/RocketsSlice';
-import Rocket from '../components/Rocket'
+import Rocket from '../components/Rocket';
 
 const Rockets = () => {
   const rockets = useSelector((store) => store.rockets);
-  console.log(rockets);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchRockets());
@@ -15,6 +14,7 @@ const Rockets = () => {
       {rockets.rockets.map((item) => (
         <Rocket
           key={item.id}
+          id={item.id}
           name={item.name}
           image={item.image}
           description={item.description}
