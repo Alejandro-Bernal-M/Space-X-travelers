@@ -8,7 +8,7 @@ const MissionsTable = () => {
       <MissionsTableRow
         name="Mission"
         description="Description"
-        header
+        header={true}
       />
       {missions.map((element) => (
         <MissionsTableRow
