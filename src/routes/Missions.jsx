@@ -1,6 +1,8 @@
+import '../styles/Missions.css';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missionsSlice';
+import MissionsTable from '../components/Missions/MissionsTable';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -8,7 +10,9 @@ const Missions = () => {
     dispatch(fetchMissions());
   }, [dispatch]);
   return (
-    <div>missions</div>
+    <section className="missions-main-container">
+      <MissionsTable />
+    </section>
   );
 };
 
