@@ -10,11 +10,11 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-      <Route index element={<Rockets />} />
-      <Route path="missions" element={<Missions />} />
-      <Route path="myprofile" element={<Profile />} />
-      <Route path="*" element={<NotMatch />} />
-    </Route>
+        <Route index element={<Rockets />} />
+        <Route path="missions" element={<Missions />} />
+        <Route path="myprofile" element={<Profile />} />
+        <Route path="*" element={<NotMatch />} />
+      </Route>
     </Routes>
   );
 }
