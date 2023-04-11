@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-// import { useEffect } from 'react';
 import missionsSlice from '../../redux/missions/missionsSlice';
 
 const { joinMission } = missionsSlice.actions;
