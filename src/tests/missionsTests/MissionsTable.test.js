@@ -7,20 +7,20 @@ test('Missions table is rendering', () => {
   const { getByText } = renderWithProviders(<MissionsTable />, {
     preloadedState: {
       missions: {
-        missions: mockMissions
+        missions: mockMissions,
       },
-    }
-  })
+    },
+  });
   expect(getByText('Description')).toBeInTheDocument();
-})
+});
 
 test('Missions table renders the correct data', () => {
   const { getByText } = renderWithProviders(<MissionsTable />, {
     preloadedState: {
       missions: {
-        missions: mockMissions
+        missions: mockMissions,
       },
-    }
-  })
+    },
+  });
   expect(getByText('Thaicom')).toBeInTheDocument();
-})
+});
