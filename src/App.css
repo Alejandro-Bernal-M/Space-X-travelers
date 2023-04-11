@@ -75,5 +75,13 @@
 }
 
 .reserved {
-  color: red;
+  color: #fff;
+  margin-right: 10px;
+  padding: 4px;
+  background-color: #1bb7df;
+  border-radius: 5px;
+}
+
+.noReserved {
+  display: none;
 }
