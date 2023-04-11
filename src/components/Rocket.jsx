@@ -23,6 +23,7 @@ const Rocket = ({
           onClick={() => {
             if (!reserved) {
               dispatch(booking(id));
+              
             } else {
               dispatch(cancelBooking(id));
             }
@@ -30,16 +31,6 @@ const Rocket = ({
         >
           {reserved ? 'Cancel Reservation' : 'Reserve Rocket' }
         </button>
-        {/* <button
-          type="button"
-          className="rocket-btn-cancel"
-          onClick={() => {
-            dispatch(cancelBooking(id));
-          }}
-        >
-          Cancel Reservation
-        </button> */}
-
       </div>
     </div>
   );
