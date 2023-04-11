@@ -15,7 +15,7 @@ const ProfileList = ({ title, elements, propertyName }) => (
       </div>
       )}
       {elements.map((element) => (
-        <div key={element.mission_id} className="profile-list-element">
+        <div key={element.name} className="profile-list-element">
           <p>{element[propertyName]}</p>
         </div>
       ))}
