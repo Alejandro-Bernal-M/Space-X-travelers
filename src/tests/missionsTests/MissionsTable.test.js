@@ -13,3 +13,14 @@ test('Missions table is rendering', () => {
   })
   expect(getByText('Description')).toBeInTheDocument();
 })
+
+test('Missions table renders the correct data', () => {
+  const { getByText } = renderWithProviders(<MissionsTable />, {
+    preloadedState: {
+      missions: {
+        missions: mockMissions
+      },
+    }
+  })
+  expect(getByText('Thaicom')).toBeInTheDocument();
+})
