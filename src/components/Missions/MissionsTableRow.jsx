@@ -6,7 +6,7 @@ import missionsSlice from '../../redux/missions/missionsSlice';
 const { joinMission } = missionsSlice.actions;
 
 const MissionsTableRow = ({
-  name, description, header, id,
+  name, description, id, reserved,
 }) => {
   const dispatch = useDispatch();
   return (
@@ -15,28 +15,24 @@ const MissionsTableRow = ({
         <h3>{name}</h3>
       </div>
       <div className="missions-table-cell table-description">
-        {header ? <h3>{description}</h3> : <p>{description}</p>}
+        <p>{description}</p>
       </div>
       <div className="missions-table-cell mission-button-container">
-        { !header ? (
-          <button
-            type="button"
-            className="not-member-button"
-          >
-            not a member
-          </button>
-        ) : <h3>Status</h3>}
+        <button
+          type="button"
+          className={reserved ? 'isMember-button' : 'not-member-button'}
+        >
+          {reserved ? 'Active member' : 'not a member'}
+        </button>
       </div>
       <div className="missions-table-cell mission-button-container">
-        { !header ? (
-          <button
-            type="button"
-            className="join-button"
-            onClick={() => { dispatch(joinMission(id)); }}
-          >
-            Join Mission
-          </button>
-        ) : <h3>Action</h3>}
+        <button
+          type="button"
+          className={reserved ? 'leave-mission-button' : 'join-mission-button'}
+          onClick={() => { dispatch(joinMission(id)); }}
+        >
+          {reserved ? 'Leave Mission' : 'Join Mission'}
+        </button>
       </div>
     </div>
   );
@@ -45,12 +41,11 @@ const MissionsTableRow = ({
 MissionsTableRow.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  header: PropTypes.bool,
   id: PropTypes.string,
+  reserved: PropTypes.bool.isRequired,
 };
 
 MissionsTableRow.defaultProps = {
-  header: false,
   id: '',
 };
 export default MissionsTableRow;

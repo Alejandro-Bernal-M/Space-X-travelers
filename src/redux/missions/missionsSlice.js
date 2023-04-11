@@ -23,7 +23,7 @@ const missionsSlice = createSlice({
     joinMission: (state, action) => {
       const newState = state.missions.forEach((element) => {
         if (element.mission_id === action.payload) {
-          element.reserved = true;
+          element.reserved = !element.reserved;
         }
       });
       return newState;
@@ -42,6 +42,7 @@ const missionsSlice = createSlice({
           item.mission_name = element.mission_name;
           item.mission_id = element.mission_id;
           item.description = element.description;
+          item.reserved = false;
           data.push(item);
         });
         state.missions = data;
