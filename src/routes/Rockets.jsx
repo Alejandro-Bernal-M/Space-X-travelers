@@ -1,9 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Rocket from '../components/Rocket';
 
 const Rockets = () => {
   const rockets = useSelector((store) => store.rockets);
- 
+
   return (
     <div className="rockets-holder">
       {rockets.rockets.map((item) => (

@@ -19,7 +19,7 @@ const Profile = () => {
       return false;
     });
     return reserved;
-  })
+  });
   return (
     <div className="profile-container">
       <ProfileList
