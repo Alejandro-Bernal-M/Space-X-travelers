@@ -26,11 +26,13 @@ const Profile = () => {
         title="Missions"
         elements={reservedMissions}
         propertyName="name"
+        dataTestId="Missions"
       />
       <ProfileList
         title="Rockets"
         elements={reservedRockets}
         propertyName="name"
+        dataTestId="Rockets"
       />
     </div>
   );

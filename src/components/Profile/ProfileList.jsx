@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import '../../styles/Profile.css';
 
-const ProfileList = ({ title, elements, propertyName }) => (
-  <div>
+const ProfileList = ({
+  title, elements, propertyName, dataTestId,
+}) => (
+  <div data-testid={dataTestId}>
     <h2>{title}</h2>
     <div
       className="profile-list-elements-container"
@@ -27,6 +29,7 @@ ProfileList.propTypes = {
   title: PropTypes.string.isRequired,
   elements: PropTypes.instanceOf(Array).isRequired,
   propertyName: PropTypes.string,
+  dataTestId: PropTypes.string.isRequired,
 };
 
 ProfileList.defaultProps = {
