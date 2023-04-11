@@ -11,21 +11,25 @@ const Profile = () => {
     });
     return reserved;
   });
-  const mockData = [
-    { name: 'Apolo' },
-    { name: 'Mars34' },
-    { name: 'Mooner8' },
-  ];
+  const reservedRockets = useSelector((store) => {
+    const reserved = store.rockets.rockets.filter((elem) => {
+      if (elem.reserved) {
+        return elem;
+      }
+      return false;
+    });
+    return reserved;
+  })
   return (
     <div className="profile-container">
       <ProfileList
         title="Missions"
         elements={reservedMissions}
-        propertyName="mission_name"
+        propertyName="name"
       />
       <ProfileList
         title="Rockets"
-        elements={mockData}
+        elements={reservedRockets}
         propertyName="name"
       />
     </div>

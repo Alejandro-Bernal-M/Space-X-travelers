@@ -10,7 +10,7 @@ const MissionsTable = () => {
       {missions.map((element) => (
         <MissionsTableRow
           key={element.mission_id}
-          name={element.mission_name}
+          name={element.name}
           description={element.description}
           id={element.mission_id}
           reserved={element.reserved}
