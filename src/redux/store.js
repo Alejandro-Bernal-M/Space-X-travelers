@@ -11,4 +11,10 @@ const store = configureStore({
   reducer: rootReducer,
 });
 
+const setupStore = (preloadedState) => configureStore({
+  reducer: rootReducer,
+  preloadedState,
+});
+
 export default store;
+export { setupStore };

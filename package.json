@@ -2,6 +2,7 @@
   "name": "spacexhub",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -20,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!spacexhub)/\"",
     "eject": "react-scripts eject",
     "fix": "eslint \"**/*.{js,jsx}\" --fix && stylelint \"**/*.{css,scss}\" --fix",
     "lint": "eslint \"**/*.{js,jsx}\" --fix"
@@ -47,6 +48,7 @@
     "@babel/core": "^7.21.4",
     "@babel/eslint-parser": "^7.21.3",
     "@babel/plugin-syntax-jsx": "^7.21.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.21.2",
     "@babel/preset-react": "^7.18.6",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -54,6 +56,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "msw": "^1.2.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
