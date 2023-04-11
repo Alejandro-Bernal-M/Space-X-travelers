@@ -1,0 +1,22 @@
+.profile-container {
+  width: 1400px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.profile-list-elements-container {
+  width: 400px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.profile-list-element {
+  padding: 13px;
+  border-top: 1px solid gray;
+}
+
+.profile-list-element:first-of-type {
+  border-top: none;
+}
