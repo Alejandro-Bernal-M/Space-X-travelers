@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background: linear-gradient(to bottom, rgba(28, 28, 29, 0.5), rgba(56, 55, 56, 0.5)), url('./background/stars.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+}
+
 .navbar {
   display: flex;
   padding: 20px;
@@ -58,6 +64,7 @@
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 60px;
+  color: #fff;
 }
 
 .reverse-column {
@@ -93,13 +100,14 @@
   text-align: justify;
   margin-bottom: 30%;
   font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  font-size: 20px;
 }
 
 .rocket-btn {
   height: 40px;
-  width: 120px;
+  width: 130px;
   background-color: #007bff;
-  color: #fff;
   border: none;
   border-radius: 6px;
 }
@@ -109,8 +117,7 @@
   border: 1px solid gray;
   border-radius: 6px;
   height: 40px;
-  width: 150px;
-  color: grey;
+  width: 160px;
 }
 
 .rocket-btn,
@@ -118,6 +125,7 @@
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 15px;
+  color: #fff;
 }
 
 .reserved {
@@ -130,6 +138,13 @@
   top: -10%;
   margin-bottom: -29px;
   text-align: center;
+}
+
+.rocket-divisor {
+  height: 1px;
+  color: #fff;
+  width: 79%;
+  margin: 0 auto;
 }
 
 .noReserved {

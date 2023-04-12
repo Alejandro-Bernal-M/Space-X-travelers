@@ -54,7 +54,7 @@ const Rockets = createSlice({
           id: rocket.rocket_id,
           name: rocket.rocket_name,
           type: rocket.rocket_type,
-          image: rocket.flickr_images[0],
+          image: rocket.flickr_images[1],
           description: rocket.description,
           count: counter,
         };

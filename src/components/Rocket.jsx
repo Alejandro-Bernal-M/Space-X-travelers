@@ -39,6 +39,7 @@ const Rocket = ({
           {reserved ? 'Cancel Reservation' : 'Reserve Rocket' }
         </button>
       </div>
+      <hr className="rocket-divisor" />
     </div>
   );
 };
