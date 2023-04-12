@@ -48,14 +48,17 @@ const Rockets = createSlice({
     ));
     builder.addCase(fetchRockets.fulfilled, (state, action) => {
       const rockets = [];
+      let counter = 0;
       action.payload.forEach((rocket) => {
         const newRocket = {
           id: rocket.rocket_id,
           name: rocket.rocket_name,
           type: rocket.rocket_type,
-          image: rocket.flickr_images[0],
+          image: rocket.flickr_images[1],
           description: rocket.description,
+          count: counter,
         };
+        counter += 1;
         rockets.push(newRocket);
       });
       state.rockets = rockets;

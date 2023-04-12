@@ -4,7 +4,7 @@ import Rockets from './routes/Rockets';
 import NotMatch from './routes/NotMatch';
 import Missions from './routes/Missions';
 import Profile from './routes/Profile';
-import './App.css';
+import './styles/App.css';
 
 function App() {
   return (
