@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Suwannaphum:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 .navbar {
   display: flex;
   padding: 20px;
@@ -39,34 +45,54 @@
 .rocket {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
-  height: 230px;
+  width: 95%;
+  height: 100vh;
   margin: 0 auto;
   align-items: center;
   margin-top: 30px;
 }
 
+.rocket-title {
+  font-family: 'Suwannaphum', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.reverse-column {
+  flex-direction: row-reverse;
+  padding-left: 40px;
+}
+
 .rocket-img-container {
-  width: 30%;
-  height: 100%;
+  width: 60%;
+  height: 80%;
 }
 
 .rocket-img {
-  width: 90%;
-  height: 100%;
+  width: 81%;
+  height: 86%;
   min-width: 100px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 .rocket-info-container {
-  width: 70%;
-  height: 100%;
+  width: 40%;
+  height: 80%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10px;
 }
 
 .rocket-description {
   text-align: justify;
-  margin-bottom: 20px;
+  margin-bottom: 30%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .rocket-btn {
@@ -87,12 +113,23 @@
   color: grey;
 }
 
+.rocket-btn,
+.rocket-btn-cancel {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
 .reserved {
   color: #fff;
-  margin-right: 10px;
+  width: 100px;
   padding: 4px;
   background-color: #1bb7df;
   border-radius: 5px;
+  position: relative;
+  top: -10%;
+  margin-bottom: -29px;
+  text-align: center;
 }
 
 .noReserved {
