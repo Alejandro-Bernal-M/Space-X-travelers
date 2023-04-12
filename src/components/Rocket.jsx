@@ -27,17 +27,24 @@ const Rocket = ({
         </p>
         <button
           type="button"
-          className={reserved ? 'rocket-btn-cancel' : 'rocket-btn'}
+          className={reserved ? 'btn rocket-btn-cancel' : 'btn rocket-btn'}
           onClick={() => {
             if (!reserved) {
               dispatch(booking(id));
+              const animation = document.querySelector(`.${id}`);
+              animation.textContent = '🚀';
+              animation.classList.add('rocketAnimation');
             } else {
               dispatch(cancelBooking(id));
+              const animation = document.querySelector(`.${id}`);
+              animation.textContent = '';
+              animation.classList.remove('rocketAnimation');
             }
           }}
         >
           {reserved ? 'Cancel Reservation' : 'Reserve Rocket' }
         </button>
+        <span className={id} />
       </div>
       <hr className="rocket-divisor" />
     </div>
