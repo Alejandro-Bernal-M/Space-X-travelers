@@ -1,0 +1,53 @@
+@keyframes fly {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.profile-container {
+  width: 1400px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #fff;
+  padding-bottom: 70px;
+}
+
+.profile-title {
+  font-size: 2.4rem;
+}
+
+.profile-list-elements-container {
+  width: 600px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.profile-list-element {
+  padding: 13px;
+  border-top: 1px solid gray;
+  font-size: 1.6rem;
+}
+
+.profile-list-element:first-of-type {
+  border-top: none;
+}
+
+.profile-emoji {
+  display: inline-block;
+  animation-name: fly;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  margin-left: 10px;
+}
