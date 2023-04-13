@@ -5,7 +5,10 @@ const ProfileList = ({
   title, elements, propertyName, dataTestId,
 }) => (
   <div data-testid={dataTestId}>
-    <h2>{title}</h2>
+    <h2 className="profile-title">
+      {title}
+      {title === 'Missions' ? <span className="profile-emoji">👩🏽‍🚀</span> : <span className="profile-emoji">🚀</span>}
+    </h2>
     <div
       className="profile-list-elements-container"
     >
