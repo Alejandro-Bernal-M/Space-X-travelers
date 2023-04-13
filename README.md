@@ -85,7 +85,7 @@ Node.js
 
 ### Setup
 
-git clone https://github.com/DavidEspinoG/spacexhub.git
+git clone https://github.com/Alejandro-Bernal-M/Space-X-travelers.git
 
 
 ### Install
