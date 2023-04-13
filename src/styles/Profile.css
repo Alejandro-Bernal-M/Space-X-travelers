@@ -2,9 +2,11 @@
   0% {
     transform: rotate(-10deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   100% {
     transform: rotate(-10deg);
   }
@@ -43,7 +45,7 @@
 
 .profile-emoji {
   display: inline-block;
-  animation-name: fly ;
+  animation-name: fly;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   margin-left: 10px;
