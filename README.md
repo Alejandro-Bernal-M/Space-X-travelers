@@ -68,7 +68,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[render](https://space-x-travelers.onrender.com/)
+[Render](https://space-x-travelers.onrender.com/)
 
 <!-- GETTING STARTED -->
 
